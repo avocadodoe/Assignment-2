@@ -1,0 +1,58 @@
+public class FindEOP {
+    
+    public static void main(String[] args) {
+        //######################################################################
+        //PROBLEM ONE: #########################################################
+        //######################################################################
+        System.out.println("Problem One: ");
+        Scanner scan = new Scanner(System.in);
+        int input;
+        
+        do { //do while the input is odd or not 0
+            
+            //get input
+            System.out.print("Please enter an integer: "); 
+            input = scan.nextInt();
+            
+            //when the input is even and not 0
+            while (input%2 == 0 && input != 0) {
+               System.out.println("You entered an even number: " + input); 
+               break; //exit the program
+           }
+
+        } while (input%2 >= 1 || input == 0);
+        
+        //######################################################################
+        //PROBLEM TWO: #########################################################
+        //######################################################################
+        System.out.println("");
+        System.out.println("Problem Two: ");
+        int input2;
+        int count;
+        
+        do {
+            //get input
+            System.out.print("Please enter an integer: ");
+            input2 = scan.nextInt();
+            count = 0;
+            
+            if (input2 == 0 || input2 == 1) { //0 and 1 are not prime numbers
+                count = 1;
+            }
+            
+            for (int i = 2; i < input2; i++) { //go through every number between 2 and that number
+                
+                if (input2%i == 0) { //if a number DOES divide evenly
+                    count++; //add 1 to the count to indicate that it's not prime
+                    //System.out.println (i + " divided by " + input2 + " evenly"); 
+                }
+                }
+            
+            if (count == 0) { //if count = 0 at the end, then nothing divided evenly into it = PRIME
+                System.out.println("You entered a prime number: " + input2);
+            }
+
+        } while (count >= 1);
+  
+    }
+}
