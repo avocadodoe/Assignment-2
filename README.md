@@ -9,7 +9,9 @@ Problem One:
 2. If the number is an even number, stop your program, and print out the
 number
 
-3. If the number is an odd number, ask the user to input again until the user input an even number 4. Use both while and do while loop.
+3. If the number is an odd number, ask the user to input again until the user input an even number
+ 
+4. Use both while and do while loop.
 
 Problem Two:
 
